@@ -93,7 +93,10 @@ public class HandleMaxRepeatProblem_v0 {
         new Thread(() -> {
             try {
                 readData();
+                Thread.sleep(3);
             } catch (IOException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 
