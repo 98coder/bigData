@@ -80,7 +80,7 @@ public class HandleMaxRepeatProblem_v0 {
                 }
                 // bigData2
                 AtomicInteger atomicInteger = countMap.computeIfAbsent(i + "", integer -> new AtomicInteger(0));
-                atomicInteger.getAndIncrement();
+                atomicInteger.addAndGet(3);
             } catch (IOException e) {
                 e.printStackTrace();
             }
