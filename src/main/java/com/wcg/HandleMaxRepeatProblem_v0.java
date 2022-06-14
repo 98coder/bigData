@@ -73,6 +73,7 @@ public class HandleMaxRepeatProblem_v0 {
 
         for (int i = start; i <= end; i++) {
             try {
+                // 创建文件干什么
                 File subFile = new File(dir + "\\" + i + ".dat");
                 if (!file.exists()) {
                     subFile.createNewFile();
