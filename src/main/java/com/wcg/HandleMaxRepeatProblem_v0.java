@@ -78,7 +78,9 @@ public class HandleMaxRepeatProblem_v0 {
                 if (!file.exists()) {
                     subFile.createNewFile();
                 }
-                countMap.computeIfAbsent(i + "", integer -> new AtomicInteger(0));
+                // bigData2
+                AtomicInteger atomicInteger = countMap.computeIfAbsent(i + "", integer -> new AtomicInteger(0));
+                atomicInteger.getAndIncrement();
             } catch (IOException e) {
                 e.printStackTrace();
             }
